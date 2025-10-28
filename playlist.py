@@ -38,13 +38,6 @@ liked_songs = {
 
 
 def AddSongsToPlaylist():
-    """
-    You see Maya's playlist songs liked and are not so happy with it, so you want to add your own songs
-    to the playlist of favorite songs.
-    Add at least 3 songs you like to the playlist and finally print the updated playlist.
-
-    What will happen if you find out that there is something there? Kiki Barberashi Hashashm
-    """
     new_songs = {
         "Blinding Lights": {
             "artist": "The Weeknd",
@@ -67,25 +60,12 @@ def AddSongsToPlaylist():
 
 
 def RemoveSongFromPlaylist():
-    """
-    Maya wants to check if you have included specific songs (by song name). Write a code that allows her to check if a particular song exists,
-    If it exists and she doesn't want it, she will remove it.
-
-    What will happen if Mom accidentally taps on the keyboard "Oh, there's a pop-up."
-    and dont use "del"
-    """
     song_to_remove = "Shake It Off"
     if song_to_remove in liked_songs:
         liked_songs.pop(song_to_remove)
     print(liked_songs)
 
 def PrintPlaylist():
-    """
-    In the next step, Maya looks at the songs you added but she doesn't like some of the artists you added and therefore wants to remove
-    all the songs by that artist from the playlist songs liked.
-    
-    What would happen if Mama would play a song by Mama Three Kiki Barbershi hahaha
-    """
     artist_to_remove = "Taylor Swift"
     songs_to_remove = [song for song, details in liked_songs.items() if details["artist"] == artist_to_remove]
     for song in songs_to_remove:
@@ -96,5 +76,6 @@ def main():
     AddSongsToPlaylist()
     RemoveSongFromPlaylist()
     PrintPlaylist()
+
 
 main()
